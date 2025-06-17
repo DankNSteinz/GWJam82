@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="gwjam82"
+run/main_scene="uid://b7qq7n40wg2xv"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [rendering]
 
