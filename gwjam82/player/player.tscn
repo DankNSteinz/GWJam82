@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5l6c4y8v0t2h"]
+
+[ext_resource type="PackedScene" uid="uid://dxasj7736kkog" path="res://human/human_sprites.tscn" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://d3yyqsqrks4j4" path="res://player/player.gd" id="1_rkbax"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
+radius = 6.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_rkbax")
+
+[node name="human_sprites" parent="." instance=ExtResource("1_oul6g")]
+position = Vector2(0, -6)
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rkbax")
+
+[node name="camera" type="Camera2D" parent="."]
+position_smoothing_enabled = true
