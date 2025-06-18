@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://b7qq7n40wg2xv"]
+[gd_scene load_steps=20 format=4 uid="uid://b7qq7n40wg2xv"]
 
 [ext_resource type="PackedScene" uid="uid://c5l6c4y8v0t2h" path="res://player/player.tscn" id="1_6xmxd"]
 [ext_resource type="Texture2D" uid="uid://rsph186rbqq6" path="res://world/floor_tiles.png" id="1_tcf2h"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cr8ghm0jrganx" path="res://objects/chalk_board.tscn" id="8_4papg"]
 [ext_resource type="PackedScene" uid="uid://dnuy2k6u54ugt" path="res://objects/desk.tscn" id="9_fyhu2"]
 [ext_resource type="PackedScene" uid="uid://bsnsqiadsnhqg" path="res://objects/student_desk.tscn" id="10_fyhu2"]
+[ext_resource type="PackedScene" uid="uid://dj5ihrngm6jbm" path="res://objects/fridge.tscn" id="11_ocfjn"]
+[ext_resource type="PackedScene" uid="uid://dttajpt4qkska" path="res://objects/left_table.tscn" id="12_dqqhb"]
+[ext_resource type="PackedScene" uid="uid://c8xxsd81xtck8" path="res://objects/center_worktop.tscn" id="13_b2suy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4717r"]
 texture = ExtResource("1_tcf2h")
@@ -845,6 +848,9 @@ position = Vector2(211, 100)
 [node name="bin8" parent="bins" instance=ExtResource("7_sc4t8")]
 position = Vector2(482, 99)
 
+[node name="bin9" parent="bins" instance=ExtResource("7_sc4t8")]
+position = Vector2(299, 371)
+
 [node name="chalk_board" type="Node2D" parent="."]
 
 [node name="chalk_board" parent="chalk_board" instance=ExtResource("8_4papg")]
@@ -876,9 +882,6 @@ position = Vector2(-164, 209)
 
 [node name="student_desk" type="Node2D" parent="."]
 
-[node name="student_desk" parent="student_desk" instance=ExtResource("10_fyhu2")]
-position = Vector2(242, 594)
-
 [node name="student_desk2" parent="student_desk" instance=ExtResource("10_fyhu2")]
 position = Vector2(400, 594)
 
@@ -893,3 +896,12 @@ position = Vector2(-175, 144)
 
 [node name="student_desk6" parent="student_desk" instance=ExtResource("10_fyhu2")]
 position = Vector2(403, 146)
+
+[node name="fridge" parent="." instance=ExtResource("11_ocfjn")]
+position = Vector2(292, 401)
+
+[node name="left_table" parent="." instance=ExtResource("12_dqqhb")]
+position = Vector2(219, 614)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("13_b2suy")]
+position = Vector2(239, 614)

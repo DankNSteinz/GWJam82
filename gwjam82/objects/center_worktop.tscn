@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8xxsd81xtck8"]
+
+[ext_resource type="Texture2D" uid="uid://bw1lohhv0p1sa" path="res://objects/center_worktop.png" id="1_5hvh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edlnx"]
+size = Vector2(24, 21)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0.5)
+shape = SubResource("RectangleShape2D_edlnx")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-1, 1.5)
+texture = ExtResource("1_5hvh5")
