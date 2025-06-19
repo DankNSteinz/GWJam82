@@ -37,7 +37,6 @@ func set_sprites():
 func get_movement_input():
 	input.x = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
 	input.y = int(Input.is_action_pressed("move_down")) - int(Input.is_action_pressed("move_up"))
-	#input = input + get_parent().get_parent().get_node("joystick").get_joystick_dir()
 	return input.normalized()
 
 func player_movement(delta):
@@ -63,3 +62,9 @@ func player_explode():
 	is_exploded = true
 	sprites.visible = false
 	print("dead")
+
+func _on_item_detection_area_entered(area):
+	if area.get_parent().is_in_group("energy_drink"):
+		area.get_parent().queue_free()
+		stamina += 20
+		print("collected_energy_drink")

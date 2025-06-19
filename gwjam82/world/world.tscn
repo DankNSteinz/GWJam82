@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://b7qq7n40wg2xv"]
+[gd_scene load_steps=22 format=4 uid="uid://b7qq7n40wg2xv"]
 
 [ext_resource type="PackedScene" uid="uid://c5l6c4y8v0t2h" path="res://player/player.tscn" id="1_6xmxd"]
 [ext_resource type="Texture2D" uid="uid://rsph186rbqq6" path="res://world/floor_tiles.png" id="1_tcf2h"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dttajpt4qkska" path="res://objects/left_table.tscn" id="12_dqqhb"]
 [ext_resource type="PackedScene" uid="uid://c8xxsd81xtck8" path="res://objects/center_worktop.tscn" id="13_b2suy"]
 [ext_resource type="PackedScene" uid="uid://dlyxgmactw6w3" path="res://npc/npc.tscn" id="14_dqqhb"]
+[ext_resource type="PackedScene" uid="uid://w5r01cta0ox4" path="res://items/energy_drink.tscn" id="15_b2suy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4717r"]
 texture = ExtResource("1_tcf2h")
@@ -770,7 +771,7 @@ tile_map_data = PackedByteArray("AAAdAAUAAQABAAAAAAAcAAUAAQABAAAAAAAbAAUAAQABAAA
 tile_set = SubResource("TileSet_4papg")
 
 [node name="player" parent="." instance=ExtResource("1_6xmxd")]
-position = Vector2(448, 608)
+position = Vector2(424, 592)
 
 [node name="lockers" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -949,5 +950,8 @@ position = Vector2(72, 72)
 
 [node name="Node2D5" type="Node2D" parent="npc/route" index="4"]
 position = Vector2(72, 0)
+
+[node name="energy_drink" parent="." instance=ExtResource("15_b2suy")]
+position = Vector2(400, 520)
 
 [editable path="npc"]

@@ -9,9 +9,8 @@ size = Vector2(28, 16)
 y_sort_enabled = true
 
 [node name="collider" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_femvk")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(0, -5)
+position = Vector2(0, -6)
 texture = ExtResource("1_vy2on")
