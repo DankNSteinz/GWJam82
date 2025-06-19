@@ -17,3 +17,16 @@ position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_nhy3c")
 
 [node name="route" type="Node2D" parent="."]
+
+[node name="raycast" type="RayCast2D" parent="."]
+enabled = false
+
+[node name="player_detection" type="Node2D" parent="."]
+
+[node name="area" type="Area2D" parent="player_detection"]
+collision_layer = 0
+
+[node name="collider" type="CollisionPolygon2D" parent="player_detection/area"]
+polygon = PackedVector2Array(-16, -8, -8, -16, 8, -16, 16, -8, 64, 64, -64, 64)
+
+[connection signal="body_entered" from="player_detection/area" to="." method="_on_near_area_body_entered"]

@@ -63,6 +63,12 @@ func player_explode():
 	sprites.visible = false
 	print("dead")
 
+func player_caught():
+	is_caught = true
+	animationTree.set("parameters/idle/blend_position", Vector2.DOWN)
+	animationState.travel("idle")
+	print("caught")
+
 func _on_item_detection_area_entered(area):
 	if area.get_parent().is_in_group("energy_drink"):
 		area.get_parent().queue_free()

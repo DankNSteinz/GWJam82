@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 0.01
+const SPEED =1250
 
 var target_pos = null
 var target_pos_list = []
@@ -8,6 +8,10 @@ var target_pos_index = 0
 
 @onready var route = $route
 @onready var sprites = $human_sprites
+@onready var animationTree = $human_sprites/anim_tree
+@onready var animationState = animationTree.get("parameters/playback")
+@onready var player_detection = $player_detection
+@onready var raycast = $raycast
 
 func _ready():
 	set_sprites()
@@ -25,10 +29,23 @@ func set_sprites():
 	sprites.set_body([1,2,3].pick_random())
 	sprites.set_legs([1,2].pick_random())
 
-
-func _physics_process(_delta):
+func _physics_process(delta):
 	if target_pos:
-		global_position = lerp(global_position, target_pos, SPEED)
+		var vec = Vector2(target_pos - global_position).normalized()
+		velocity = vec * SPEED * delta
 		if global_position.snapped(Vector2(20,20)) == target_pos.snapped(Vector2(20,20)):
 			target_pos_index = (target_pos_index + 1) % target_pos_list.size()
 			target_pos = target_pos_list[target_pos_index]
+		animationTree.set("parameters/idle/blend_position", vec)
+		animationTree.set("parameters/walk/blend_position", vec)
+		animationState.travel("walk")
+		player_detection.rotation = vec.angle() - 1.57
+		move_and_slide()
+
+func _on_near_area_body_entered(body):
+	if body.is_in_group("player"):
+		raycast.enabled = true
+		raycast.target_position = body.global_position - global_position
+		raycast.force_raycast_update()
+		if raycast.get_collider() == body:
+			body.player_caught()
