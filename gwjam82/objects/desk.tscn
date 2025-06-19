@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://cujp57bshpr8y" path="res://objects/desk.png" id="1_cu8i2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2dte"]
-size = Vector2(23.5, 7)
+size = Vector2(23, 13)
 
 [node name="desk" type="StaticBody2D"]
+y_sort_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16.25, 5.5)
+[node name="collider" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_p2dte")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(17, 0)
+[node name="sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_cu8i2")

@@ -25,11 +25,11 @@ func _physics_process(delta):
 			player_explode()
 
 func set_sprites():
-	sprites.set_skin_mod(Color.PEACH_PUFF)
-	sprites.set_eyes_mod(Color.WHITE)
-	sprites.set_head_mod(Color.RED)
-	sprites.set_body_mod(Color.DARK_GREEN)
-	sprites.set_legs_mod(Color.DARK_SLATE_GRAY)
+	sprites.set_skin_mod(Color("a2777b"))
+	sprites.set_eyes_mod(Color("f0ebeb"))
+	sprites.set_head_mod(Color("bd4f47"))
+	sprites.set_body_mod(Color("458f58"))
+	sprites.set_legs_mod(Color("222249"))
 	sprites.set_head(2)
 	sprites.set_body(1)
 	sprites.set_legs(1)
