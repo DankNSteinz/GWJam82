@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmqkmhwttdmce"]
+
+[ext_resource type="Texture2D" uid="uid://bbho2pugyhx8h" path="res://objects/alarm.png" id="1_ko521"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rjhyd"]
+radius = 6.7082
+
+[node name="alarm" type="StaticBody2D"]
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rjhyd")
+
+[node name="Sprite2D" type="Sprite2D" parent="collider"]
+texture = ExtResource("1_ko521")

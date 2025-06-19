@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://pemeg3csvffq"]
+
+[ext_resource type="Texture2D" uid="uid://o1dlglc34awl" path="res://objects/bball_hoop.png" id="1_3iall"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ns63"]
+size = Vector2(29.375, 15.75)
+
+[node name="bball_hoop" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -1.4)
+shape = SubResource("RectangleShape2D_0ns63")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+texture = ExtResource("1_3iall")

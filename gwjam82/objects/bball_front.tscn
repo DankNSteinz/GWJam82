@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cadsxpdsmjf7l"]
+
+[ext_resource type="Texture2D" uid="uid://buf2yviroay55" path="res://objects/bball_hoop_front.png" id="1_oaa45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xs3rk"]
+size = Vector2(30, 8.5)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="StaticBody2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oaa45")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xs3rk")

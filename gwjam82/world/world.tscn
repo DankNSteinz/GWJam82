@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://b7qq7n40wg2xv"]
+[gd_scene load_steps=27 format=4 uid="uid://b7qq7n40wg2xv"]
 
 [ext_resource type="PackedScene" uid="uid://c5l6c4y8v0t2h" path="res://player/player.tscn" id="1_6xmxd"]
 [ext_resource type="AudioStream" uid="uid://cvh0an5cnkv23" path="res://world/bg_music.mp3" id="1_h8lre"]
@@ -16,6 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://c8xxsd81xtck8" path="res://objects/center_worktop.tscn" id="13_b2suy"]
 [ext_resource type="PackedScene" uid="uid://dlyxgmactw6w3" path="res://npc/npc.tscn" id="14_dqqhb"]
 [ext_resource type="PackedScene" uid="uid://w5r01cta0ox4" path="res://items/energy_drink.tscn" id="15_b2suy"]
+[ext_resource type="PackedScene" uid="uid://cmqkmhwttdmce" path="res://objects/alarm.tscn" id="17_j34ew"]
+[ext_resource type="PackedScene" uid="uid://bbtkfcnu28srf" path="res://objects/clock.tscn" id="18_p2iis"]
+[ext_resource type="PackedScene" uid="uid://pemeg3csvffq" path="res://objects/bball_hoop.tscn" id="19_aysyn"]
+[ext_resource type="PackedScene" uid="uid://cadsxpdsmjf7l" path="res://objects/bball_front.tscn" id="20_p2iis"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4717r"]
 texture = ExtResource("1_tcf2h")
@@ -893,51 +897,141 @@ position = Vector2(-15, 119)
 [node name="chalk_board4" parent="chalk_board" instance=ExtResource("8_4papg")]
 position = Vector2(-176, 119)
 
-[node name="student_desk2" type="Node2D" parent="."]
+[node name="desk" type="Node2D" parent="."]
 y_sort_enabled = true
 position = Vector2(16, 8)
 
-[node name="desk" parent="student_desk2" instance=ExtResource("9_fyhu2")]
-position = Vector2(-193, 185)
+[node name="student_desk" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-191, 160)
 
-[node name="desk2" parent="student_desk2" instance=ExtResource("9_fyhu2")]
-position = Vector2(-228, 180)
+[node name="student_desk2" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-224, 159)
 
-[node name="desk3" parent="student_desk2" instance=ExtResource("9_fyhu2")]
-position = Vector2(-163, 181)
+[node name="student_desk3" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-159, 159)
 
-[node name="desk4" parent="student_desk2" instance=ExtResource("9_fyhu2")]
-position = Vector2(-164, 209)
+[node name="student_desk4" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-157, 190)
 
-[node name="desk5" parent="student_desk2" instance=ExtResource("9_fyhu2")]
-position = Vector2(-16, 184)
+[node name="student_desk5" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-225, 222)
 
-[node name="student_desk" type="Node2D" parent="."]
+[node name="desk" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-30, 189)
+
+[node name="desk2" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-67, 190)
+
+[node name="desk3" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(4, 161)
+
+[node name="desk4" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-30, 161)
+
+[node name="desk5" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-66, 160)
+
+[node name="desk6" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-158, 222)
+
+[node name="desk7" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-191, 221)
+
+[node name="desk8" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-225, 191)
+
+[node name="desk9" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-191, 190)
+
+[node name="desk10" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(388, 166)
+
+[node name="desk11" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(260, 223)
+
+[node name="desk12" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(225, 222)
+
+[node name="desk13" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(190, 221)
+
+[node name="desk14" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(260, 195)
+
+[node name="desk15" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(225, 194)
+
+[node name="desk16" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(189, 195)
+
+[node name="desk17" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(260, 166)
+
+[node name="desk18" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(189, 168)
+
+[node name="desk19" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(224, 166)
+
+[node name="desk20" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(6, 217)
+
+[node name="desk21" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-30, 217)
+
+[node name="desk22" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(-66, 217)
+
+[node name="desk23" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(4, 188)
+
+[node name="desk24" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(425, 220)
+
+[node name="desk25" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(388, 219)
+
+[node name="desk26" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(351, 221)
+
+[node name="desk27" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(426, 193)
+
+[node name="desk28" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(388, 193)
+
+[node name="desk29" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(350, 193)
+
+[node name="desk30" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(425, 167)
+
+[node name="desk31" parent="desk" instance=ExtResource("9_fyhu2")]
+position = Vector2(350, 167)
+
+[node name="teacher_desk" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="student_desk2" parent="student_desk" instance=ExtResource("10_fyhu2")]
-position = Vector2(400, 594)
+[node name="desk1" parent="teacher_desk" instance=ExtResource("10_fyhu2")]
+position = Vector2(190, 410)
 
-[node name="student_desk3" parent="student_desk" instance=ExtResource("10_fyhu2")]
+[node name="desk2" parent="teacher_desk" instance=ExtResource("10_fyhu2")]
 position = Vector2(239, 145)
 
-[node name="student_desk4" parent="student_desk" instance=ExtResource("10_fyhu2")]
+[node name="desk3" parent="teacher_desk" instance=ExtResource("10_fyhu2")]
 position = Vector2(-14, 143)
 
-[node name="student_desk5" parent="student_desk" instance=ExtResource("10_fyhu2")]
+[node name="desk4" parent="teacher_desk" instance=ExtResource("10_fyhu2")]
 position = Vector2(-175, 144)
 
-[node name="student_desk6" parent="student_desk" instance=ExtResource("10_fyhu2")]
+[node name="desk5" parent="teacher_desk" instance=ExtResource("10_fyhu2")]
 position = Vector2(403, 146)
 
 [node name="fridge" parent="." instance=ExtResource("11_ocfjn")]
 position = Vector2(288, 408)
 
 [node name="left_table" parent="." instance=ExtResource("12_dqqhb")]
-position = Vector2(224, 608)
-
-[node name="centre_worktop" parent="." instance=ExtResource("13_b2suy")]
-position = Vector2(248, 608)
+position = Vector2(227, 615)
 
 [node name="npc" parent="." instance=ExtResource("14_dqqhb")]
 position = Vector2(360, 432)
@@ -958,6 +1052,83 @@ position = Vector2(72, 0)
 
 [node name="energy_drink" parent="." instance=ExtResource("15_b2suy")]
 position = Vector2(400, 520)
+
+[node name="centre_worktop2" type="Node2D" parent="."]
+
+[node name="centre_worktop" parent="centre_worktop2" instance=ExtResource("13_b2suy")]
+position = Vector2(270, 616)
+
+[node name="centre_worktop2" parent="centre_worktop2" instance=ExtResource("13_b2suy")]
+position = Vector2(292, 616)
+
+[node name="centre_worktop3" parent="centre_worktop2" instance=ExtResource("13_b2suy")]
+position = Vector2(292, 574)
+
+[node name="centre_worktop4" parent="centre_worktop2" instance=ExtResource("13_b2suy")]
+position = Vector2(248, 616)
+
+[node name="centre_worktop5" parent="centre_worktop2" instance=ExtResource("13_b2suy")]
+position = Vector2(292, 596)
+
+[node name="alarms" type="Node2D" parent="."]
+
+[node name="alarm" parent="alarms" instance=ExtResource("17_j34ew")]
+position = Vector2(348, 118)
+
+[node name="alarm2" parent="alarms" instance=ExtResource("17_j34ew")]
+position = Vector2(296, 118)
+
+[node name="alarm3" parent="alarms" instance=ExtResource("17_j34ew")]
+position = Vector2(-71, 117)
+
+[node name="alarm4" parent="alarms" instance=ExtResource("17_j34ew")]
+position = Vector2(-231, 117)
+
+[node name="alarm5" parent="alarms" instance=ExtResource("17_j34ew")]
+position = Vector2(348, 390)
+
+[node name="alarm6" parent="alarms" instance=ExtResource("17_j34ew")]
+position = Vector2(213, 390)
+
+[node name="alarm7" parent="alarms" instance=ExtResource("17_j34ew")]
+position = Vector2(-228, 390)
+
+[node name="clock" type="Node2D" parent="."]
+
+[node name="clock1" parent="clock" instance=ExtResource("18_p2iis")]
+position = Vector2(443, 389)
+
+[node name="clock2" parent="clock" instance=ExtResource("18_p2iis")]
+position = Vector2(268, 388)
+
+[node name="clock3" parent="clock" instance=ExtResource("18_p2iis")]
+position = Vector2(375, 118)
+
+[node name="clock4" parent="clock" instance=ExtResource("18_p2iis")]
+position = Vector2(210, 118)
+
+[node name="clock5" parent="clock" instance=ExtResource("18_p2iis")]
+position = Vector2(16, 119)
+
+[node name="clock6" parent="clock" instance=ExtResource("18_p2iis")]
+position = Vector2(-152, 118)
+
+[node name="clock7" parent="clock" instance=ExtResource("18_p2iis")]
+position = Vector2(-101, 392)
+
+[node name="bball_hoops" type="Node2D" parent="."]
+
+[node name="bball_hoop" parent="bball_hoops" instance=ExtResource("19_aysyn")]
+position = Vector2(-18, 613)
+
+[node name="bball_hoop2" parent="bball_hoops" instance=ExtResource("19_aysyn")]
+position = Vector2(-184, 613)
+
+[node name="bball_front1" parent="bball_hoops" instance=ExtResource("20_p2iis")]
+position = Vector2(-18, 403)
+
+[node name="bball_front2" parent="bball_hoops" instance=ExtResource("20_p2iis")]
+position = Vector2(-183, 403)
 
 [editable path="npc"]
 [editable path="npc/human_sprites"]

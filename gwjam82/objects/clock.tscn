@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbtkfcnu28srf"]
+
+[ext_resource type="Texture2D" uid="uid://ekybug6fqurk" path="res://objects/clock.png" id="1_cdt0o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqjj8"]
+radius = 5.0
+
+[node name="clock" type="StaticBody2D"]
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lqjj8")
+
+[node name="Sprite2D" type="Sprite2D" parent="collider"]
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cdt0o")
